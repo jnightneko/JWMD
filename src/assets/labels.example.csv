@@ -1,0 +1,23 @@
+filename,tipo_bebida,etiqueta_mal_colocada,contenido_incorrecto,subllenado,llenado,mediollenado
+img001.jpg,0,1,0,0,0,0
+img002.jpg,1,0,0,0,0,0
+img003.jpg,1,0,1,1,0,0
+img004.jpg,2,1,1,0,0,0
+
+# Tipo de bebida:
+    0: Coca cola 
+    1: Fanta
+    2: Sprite
+
+# Tipos de llenado
+    1: Si cumple el tipo (subllenado, llenado, mediollenado)
+    0: SI no cumple
+    # Ej: Si es una coca que está llena, se pondría 1 en llenado, y 0 en los otros 2
+
+# Defectos
+    1: Si cumple con el defecto (etiqueta_mal_colocada, contenido_incorrecto)
+    0: Si no cumple
+    # Defectos: etiqueta_mal_colocada, contenido_incorrecto
+
+# Las imágenes deben llevar el formato img001, img00n
+
