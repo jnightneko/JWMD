@@ -28,7 +28,7 @@ def actualizar_csv(inicio, fin, tipo_bebida, llenado_tipo, etiqueta_defecto, con
     # Generar nuevos datos
     nuevos = []
     for i in range(inicio, fin + 1):
-        nombre = f"img{i:03d}.jpg"
+        nombre = f"img{i:04d}.jpg"
         if nombre in existentes:
             continue  # Evitar duplicados
         fila = generar_fila(nombre, tipo_bebida, etiqueta_defecto, contenido_defecto, llenado_tipo)
