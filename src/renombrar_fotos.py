@@ -37,7 +37,7 @@ def renombrar_fotos(directorio, inicio):
     numero = inicio
     for img, fecha in imagenes_con_fecha:
         nueva_ext = img.suffix.lower()
-        nuevo_nombre = f"img{numero:03d}{nueva_ext}"
+        nuevo_nombre = f"img{numero:04d}{nueva_ext}"
         nueva_ruta = directorio / nuevo_nombre
 
         if nueva_ruta.exists():
