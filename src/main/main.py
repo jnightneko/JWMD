@@ -3,8 +3,8 @@ import os
 
 from dotenv import load_dotenv
 
-ESTADO_BUENO = "BUENO"
-ESTADO_MALO = "MALO"
+ESTADO_BUENO = "0"
+ESTADO_MALO = "1"
 
 def conectar() -> None:
     load_dotenv()
