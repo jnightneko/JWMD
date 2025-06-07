@@ -14,7 +14,7 @@ def generar_fila(nombre, tipo_bebida, defecto1, defecto2, llenado_tipo):
     return fila
 
 def actualizar_csv(inicio, fin, tipo_bebida, llenado_tipo, etiqueta_defecto, contenido_defecto):
-    ruta_csv = Path('assets') / 'labels.csv'
+    ruta_csv = Path('../assets') / 'labels.csv'
     
     # Leer datos existentes
     datos = []
@@ -28,7 +28,7 @@ def actualizar_csv(inicio, fin, tipo_bebida, llenado_tipo, etiqueta_defecto, con
     # Generar nuevos datos
     nuevos = []
     for i in range(inicio, fin + 1):
-        nombre = f"img{i:03d}.jpg"
+        nombre = f"img{i:04d}.jpg"
         if nombre in existentes:
             continue  # Evitar duplicados
         fila = generar_fila(nombre, tipo_bebida, etiqueta_defecto, contenido_defecto, llenado_tipo)
