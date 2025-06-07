@@ -14,7 +14,7 @@ def generar_fila(nombre, tipo_bebida, defecto1, defecto2, llenado_tipo):
     return fila
 
 def actualizar_csv(inicio, fin, tipo_bebida, llenado_tipo, etiqueta_defecto, contenido_defecto):
-    ruta_csv = Path('assets') / 'labels.csv'
+    ruta_csv = Path('../assets') / 'labels.csv'
     
     # Leer datos existentes
     datos = []
