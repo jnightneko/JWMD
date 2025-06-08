@@ -3,7 +3,7 @@ import torch
 import numpy as np
 from PIL import Image
 from torchvision.transforms.functional import resize
-from modelo import MultiInputModel # Asegúrate de que modelo.py está en la misma carpeta o en el PATH
+from tests.version3.modelo import MultiInputModel # Asegúrate de que modelo.py está en la misma carpeta o en el PATH
 
 # --- CONFIGURACIÓN (Asegúrate de que estos valores coincidan EXACTAMENTE con tu entrenamiento) ---
 num_tipos_bebida = 3
