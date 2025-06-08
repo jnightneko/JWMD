@@ -1,5 +1,16 @@
-import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert } from "typeorm";
-import { IsUUID, IsString, IsNumber, Min, Max } from "class-validator";
+import { 
+    Entity,
+    PrimaryGeneratedColumn,
+    Column,
+    BeforeInsert 
+} from "typeorm";
+
+import { 
+    IsUUID, 
+    IsString, 
+    IsNumber, 
+    IsDate 
+} from "class-validator";
 import { v4 as uuidv4 } from 'uuid'
 
 @Entity( )
@@ -23,6 +34,10 @@ export class Botella {
     @Column()
     @IsNumber()
     estado: number;
+
+    @Column()
+    @IsDate()
+    fecha: Date;
     
     @BeforeInsert()
     generateUUID() {
