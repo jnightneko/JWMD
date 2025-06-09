@@ -12,7 +12,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: '',
+      password: 'Qw123456',
       database: 'jwmd',
       entities: [Botella], //Poner todas las entidades que nos van a servir
       synchronize: true
