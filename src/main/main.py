@@ -75,7 +75,7 @@ def preprocess_image(frame):
     return img_color_tensor, img_bordes_tensor
 
 
-def hay_botella_con_yolo(frame):
+def hay_botella_con_yolo(frame,yolo_model):
     results = yolo_model(frame, verbose=False)[0]
     for r in results.boxes:
         cls_id = int(r.cls)
@@ -128,7 +128,7 @@ def main(args) -> int:
                 print("Error leyendo frame.")
                 break
 
-            if hay_botella_con_yolo(frame):
+            if hay_botella_con_yolo(frame, yolo_model):
                 img_color, img_bordes = preprocess_image(frame)
                 img_color = img_color.to(device)
                 img_bordes = img_bordes.to(device)
