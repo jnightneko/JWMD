@@ -153,7 +153,7 @@ def main(args) -> int:
 
                 # Guardar información de la imagén capturada
                 img_frame_path = './img/'
-                img_frame_name = img_frame_name + str(datetime.datetime.now()) + '.jpg'
+                img_frame_name = img_frame_path + str(datetime.datetime.now()) + '.jpg'
                 
                 cv2.imwrite(img_frame_name, frame)
 
