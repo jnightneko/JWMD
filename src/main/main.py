@@ -15,9 +15,9 @@ from ultralytics import YOLO
 from dto import Botella, toJSONBotella
 from dotenv import load_dotenv
 
-ESTADO_BUENO    = "0"
-ESTADO_MALO     = "1"
-TIEMPO_ESPERA   = 3 #segundos
+ESTADO_BUENO = "0"
+ESTADO_MALO = "1"
+TIEMPO_ESPERA = 3 #segundos
 
 """
     Función encargada de abrir una conexión serie con arduino, pedendiedo el sistema operativo
