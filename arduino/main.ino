@@ -9,7 +9,7 @@ const int IN4 = 7;
 const int ENB = 10; // velocidad de la cinta
 
 int velocidadCinta = 130;
-bool flag = false;
+bool flag = true;
 
 void setup() {
   Serial.begin(9600);
@@ -31,32 +31,32 @@ void loop() {
   if (Serial.available() > 0) {
     char entrada = Serial.read();
     if (entrada == '1') {
-      flag = true;
-    } else if (entrada == '0') {
       flag = false;
+    } else if (entrada == '0') {
+      flag = true;
     }
   }
 
-  if (flag == true) {
+  if (flag == false) {
     // Detener cinta
     detenerCinta();
 
-    // Mover brazo a posición objetivo (derecha)
-    digitalWrite(IN1, LOW);
-    digitalWrite(IN2, HIGH);
-    delay(1650);
-
-    // Regresar brazo (izquierda)
+    // mover brazo (izquierda)
     digitalWrite(IN1, HIGH);
     digitalWrite(IN2, LOW);
-    delay(1600);
+    delay(3300);
+    
+    // Mover brazo (derecha)
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    delay(3200);
 
     // Detener brazo
     digitalWrite(IN1, LOW);
     digitalWrite(IN2, LOW);
 
     // Reiniciar flag para esperar otra orden
-    flag = false;
+    flag = true;
   } else {
     // Cinta: sigue avanzando
     digitalWrite(IN3, LOW);
